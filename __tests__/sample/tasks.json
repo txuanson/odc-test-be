@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Task 1",
+    "startDate": "2020-01-01",
+    "endDate": "2020-01-02",
+    "status": "TODO"
+  },
+  {
+    "id": 2,
+    "name": "Task 2",
+    "startDate": "2020-01-02",
+    "endDate": "2020-01-03",
+    "status": "IN_PROGRESS"
+  },
+  {
+    "id": 3,
+    "name": "Task 3",
+    "startDate": "2020-01-03",
+    "endDate": "2020-01-04",
+    "status": "COMPLETED"
+  }
+]
