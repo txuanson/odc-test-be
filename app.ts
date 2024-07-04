@@ -25,6 +25,7 @@ export default class App {
     await this.initializeDataSource()
     this.initializeMiddlewares();
     this.initializeControllers(this.controllers);
+    this.initializeNotFoundHandler();
     this.initializeErrorHandler();
   }
 
@@ -49,6 +50,14 @@ export default class App {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+  }
+
+  private initializeNotFoundHandler() {
+    this.app.use((_, res) => {
+      res.status(404).send({
+        message: "Resource not found"
+      });
+    });
   }
 
   private initializeErrorHandler() {
